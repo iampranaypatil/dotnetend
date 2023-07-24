@@ -1,0 +1,56 @@
+﻿@using BOL;
+
+@{
+    ViewData["Title"] = "List Of Employees";
+}
+
+@* empId | name         | email                    | password | location    | joinDate   | salary*@
+
+<html>
+    <head>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+    </head>
+
+<table>
+    <thead>
+        <tr>
+            <th>EMPID</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+            <th>LOCATION</th>
+            <th>JOINDATE</th>
+            <th>SALARY</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            @foreach (Employee e in ViewBag.Employees)
+            {
+        <tr>
+            <td>@e.empId</td>
+            <td>@e.name</td>
+            <td>@e.email</td>
+            <td>@e.password</td>
+            <td>@e.location</td>
+            <td>@e.joinDate</td>
+            <td>@e.salary</td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>
+        <h4>To Add NEW Employee @Html.ActionLink("Click Here","Register")</h4>
+</html>

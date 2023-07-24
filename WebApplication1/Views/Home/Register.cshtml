@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration</title>
+</head>
+<body>
+    <h2>Employee Registration Form</h2>
+    <form action="/Home/Register" method="post">
+        <!-- empId | name         | email                    | password | location    | joinDate   | salary-->
+        <label for="empId">Emp ID:</label>
+        <input type="text" id="firstName" name="empId" required><br>
+
+        <label for="name">Emp Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br>
+
+        <label for="joinDate">JoinDate:</label>
+        <input type="date" id="joinDate" name="joinDate" required><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
